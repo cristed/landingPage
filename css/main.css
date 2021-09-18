@@ -36,10 +36,10 @@ body {
 
 .header-video video {
   min-width: 100%;
-  min-height: 100%
+  min-height: 100%;
 }
 
-.header-overlay{
+.header-overlay {
   height: 100vh;
   width: 100vw;
   position: absolute;
@@ -47,29 +47,29 @@ body {
   left: 0;
   background: #0a0b0c;
   z-index: 1;
-  opacity: .80;
+  opacity: 0.8;
 }
 
-.header-content{
-    z-index: 2;
+.header-content {
+  z-index: 2;
 }
 
-.header-content h1{
-    font-size: 50px;
-    margin-bottom: 0;
-    font-family: 'Lobster', cursive;
+.header-content h1 {
+  font-size: 50px;
+  margin-bottom: 0;
+  font-family: "Lobster", cursive;
 }
 
-.header-content p{
-    font-size: 1.5rem;
-    display: block;
-    padding-bottom: 2rem;
+.header-content p {
+  font-size: 1.5rem;
+  display: block;
+  padding-bottom: 2rem;
 }
 
-@media(max-width:960px){
-    .content{
-        padding: 0 3rem 0 rem;
-    }
+@media (max-width: 960px) {
+  .content {
+    padding: 0 3rem 0 rem;
+  }
 }
 
 /* Para los servicios */
@@ -83,7 +83,7 @@ body {
 }
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .cards {
@@ -98,13 +98,13 @@ body {
 .card {
   position: relative;
   display: block;
-  height: 100%;  
+  height: 100%;
   border-radius: calc(var(--curve) * 1px);
   overflow: hidden;
   text-decoration: none;
 }
 
-.card__image {      
+.card__image {
   width: 100%;
   height: auto;
 }
@@ -114,11 +114,11 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;      
-  border-radius: calc(var(--curve) * 1px);    
-  background-color: var(--surface-color);      
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
   transform: translateY(100%);
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .card:hover .card__overlay {
@@ -131,10 +131,10 @@ body {
   align-items: center;
   gap: 2em;
   /* padding: 2em; */
-  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  border-radius: calc(var(--curve) * 1px) 0 0 0;
   background-color: var(--surface-color);
   transform: translateY(-100%);
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .card__arc {
@@ -142,14 +142,14 @@ body {
   height: 80px;
   position: absolute;
   bottom: 100%;
-  right: 0;      
+  right: 0;
   z-index: 1;
 }
 
 .card__arc path {
   fill: var(--surface-color);
   d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
-}       
+}
 
 .card:hover .card__header {
   transform: translateY(0);
@@ -158,36 +158,66 @@ body {
 .card__thumb {
   flex-shrink: 0;
   width: 50px;
-  height: 50px;      
-  border-radius: 50%;      
+  height: 50px;
+  border-radius: 50%;
 }
 
 .card__title {
   font-size: 1em;
-  margin: 0 0 .3em;
-  color: #6A515E;
+  margin: 0 0 0.3em;
+  color: #6a515e;
 }
 
 .card__tagline {
   display: block;
   margin: 1em 0;
-  font-family: "MockFlowFont";  
-  font-size: .8em; 
-  color: #D7BDCA;  
+  font-family: "MockFlowFont";
+  font-size: 0.8em;
+  color: #d7bdca;
 }
 
 .card__status {
-  font-size: .8em;
-  color: #D7BDCA;
+  font-size: 0.8em;
+  color: #d7bdca;
 }
 
 .card__description {
   padding: 0 2em 2em;
   margin: 0;
-  color: #D7BDCA;
-  font-family: "MockFlowFont";   
+  color: #d7bdca;
+  font-family: "MockFlowFont";
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
-}    
+}
+
+.testimonial {
+  background-color: #555c53; /*En este espacio le ponemos el color a la seccion Testimoniales*/
+  font-size: 2.4rem;
+  padding: 2rem; /*le ponemos un espacio dentro del cuadro verde*/
+  color: #ffffff; /*Color de la letra*/
+  border-radius: 2rem; /*poner un estilo a la franja de testimoniales redondo en las esquinas*/
+  margin-top: 2rem;
+}
+
+.testimonial blockquote::before {
+  /*Poner algo antes de cieto elemento*/
+  content: "";
+  background-image: url(../images/comilla.svg);
+  height: 4rem; /*Le damos una altura a las comillas*/
+  width: 4rem; /*le damos un ancho a las comillas*/
+  display: block; /*Si no hay un display block no se puede monstrar la imagen*/
+  position: absolute; /*Posicional un elemento en un lugar en especifico*/
+  left: -2rem;
+}
+
+.testimonial blockquote {
+  position: relative;
+  padding-left: 5rem; /*Posicional todo el elemento del texto hacia la izquierda*/
+  font-weight: 300; /*Cambiar el tamaño de la letra para que sea un poco mas delgada*/
+}
+.testimonial p {
+  /*Con esto llamamos una parte de nuestro codigo en un lugar especifico*/
+  text-align: right; /*Alinear hacia la derecha el autor del testimonial*/
+}
