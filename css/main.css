@@ -12,7 +12,7 @@ body {
 
 .header {
   height: 100vh;
-  display: flex;
+  display: grid;
   align-items: center;
   color: #fff;
 }
@@ -178,13 +178,13 @@ body {
 
 .card__status {
   font-size: 0.8em;
-  color: #d7bdca;
+  color:#555c53;
 }
 
 .card__description {
   padding: 0 2em 2em;
   margin: 0;
-  color: #d7bdca;
+  color:black;
   font-family: "MockFlowFont";
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -239,3 +239,16 @@ body {
    color: white;
    text-align: center;
 }
+
+/*Justificar y centrar texto de acerca de nosotros*/
+@media screen and (max-width: 750px) {
+  h2 {
+    text-align: center;
+  }
+  
+}
+
+.justifica {
+    text-align: justify;
+    padding: 1rem;
+  }
