@@ -192,32 +192,40 @@ body {
   overflow: hidden;
 }
 
+.testimoniales {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+  grid-auto-rows: minmax(100px, auto);
+}
 .testimonial {
   background-color: #555c53; /*En este espacio le ponemos el color a la seccion Testimoniales*/
-  font-size: 2.4rem;
   padding: 2rem; /*le ponemos un espacio dentro del cuadro verde*/
   color: #ffffff; /*Color de la letra*/
-  border-radius: 2rem; /*poner un estilo a la franja de testimoniales redondo en las esquinas*/
+  border-radius: 1.5rem; /*poner un estilo a la franja de testimoniales redondo en las esquinas*/
   margin-top: 2rem;
 }
 
+/*Uso de las comillas*/
 .testimonial blockquote::before {
   /*Poner algo antes de cieto elemento*/
   content: "";
   background-image: url(../images/comilla.svg);
-  height: 4rem; /*Le damos una altura a las comillas*/
-  width: 4rem; /*le damos un ancho a las comillas*/
+  background-repeat: no-repeat;
+  height: 3rem; /*Le damos una altura a las comillas*/
+  width: 3rem; /*le damos un ancho a las comillas*/
   display: block; /*Si no hay un display block no se puede monstrar la imagen*/
   position: absolute; /*Posicional un elemento en un lugar en especifico*/
-  left: -2rem;
+  left: -2rem; /*Separa las commilas a la izquierda*/
 }
 
 .testimonial blockquote {
   position: relative;
-  padding-left: 5rem; /*Posicional todo el elemento del texto hacia la izquierda*/
-  font-weight: 300; /*Cambiar el tamaño de la letra para que sea un poco mas delgada*/
+  padding-left: 1.5rem; /*Posicional todo el elemento del texto hacia la izquierda*/
+  /*font-weight: 200; Cambiar el tamaño de la letra para que sea un poco mas delgada*/
 }
 .testimonial p {
   /*Con esto llamamos una parte de nuestro codigo en un lugar especifico*/
   text-align: right; /*Alinear hacia la derecha el autor del testimonial*/
+  font-size: 1rem;
 }
